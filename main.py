@@ -9,7 +9,7 @@ async def fake_user(request):
     data = {'name':fake.name(),'email':fake.email()}
     #json
     return web.json_response(data)
-'''we transfer host data to the router (specify your path) or if you have your own host, then specify it'''
+'''we transfer host data to the router (specify your path) or if you have your own host, then specify it(com)'''
 app.add_routes([web.get(f'{os.getcwd()}',fake_user)])
 
 
